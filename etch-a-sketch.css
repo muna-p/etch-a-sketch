@@ -1,10 +1,88 @@
+body {
+    background-color: rgba(120, 122, 123, 0.285);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.mainWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
     width: 640px;
     height: 640px;
+    border: 80px solid #e81d27;
+    border-radius: 30px;
+    box-shadow: 5px 10px 8px rgba(62, 60, 60, 0.6);
+    position: relative;
+    margin-top: -70px;
 }
 
 .square {
     box-sizing: border-box;
+    background-color: white;
+}
+
+.header {
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.714);
+    z-index: 2;
+    position: relative;
+    margin-bottom: -10px;
+    margin-top: 50px;
+    margin-left: -150px;
+    font-size: 40px;
+    color: #e0d621f2;
+    font-family: 'Apple Chancery', cursive;
+    text-align: center;
+}
+
+button {
+    display: block;
+    text-transform:uppercase;
+    font-weight: 800;
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(10, 165, 189, 0.518);
+    box-shadow: 0px 10px 5px 2px rgba(116, 115, 115, 0.939);
+    border: none;
+    width: 90px;
+    height: 60px;
+    margin: 50px;
+    cursor: pointer;
+}
+
+.sliderGrid{
+    -webkit-appearance: none;
+    -webkit-transition: .2s;
+    appearance: none;
+    width: 80%;
+    height: 20px;
+    background: white;
+    opacity: 0.5;
+    margin-left: 50px;
+}
+
+.sliderGrid::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(10, 165, 189, 0.518);
+    cursor: grab;
+    border-radius: 50%;
+}
+
+.sliderValue {
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+button:active {
+    box-shadow: 0 5px gray;
+    transform: translateY(4px);
 }

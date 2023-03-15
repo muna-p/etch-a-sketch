@@ -31,6 +31,7 @@ gridButton.textContent = 'Grid';
 containerTwo.appendChild(gridButton);
 
 let sliderGrid = document.createElement('INPUT');
+sliderGrid.className = 'sliderGrid';
 sliderGrid.setAttribute('id', 'sliderInput');
 sliderGrid.setAttribute('type', 'range');
 sliderGrid.setAttribute('min', '2');
@@ -39,7 +40,8 @@ sliderGrid.setAttribute('value', '16');
 sliderGrid.setAttribute('oninput', 'sliderValue.textContent = this.value') ;
 containerTwo.appendChild(sliderGrid);
 
-let sliderValue = document.createElement('p');
+let sliderValue = document.createElement('div');
+sliderValue.className = 'sliderValue';
 sliderValue.setAttribute('id', 'sliderValue');
 sliderValue.textContent = '16';
 containerTwo.appendChild(sliderValue);
@@ -72,7 +74,6 @@ function squareGenerate(amount){
     if (gridValue == true) {
         for(let i=0; i< squares.length; i++){
             squares[i].style.border = '1px solid black';
-            container.style.border = '1px solid black';
         } }
 }
 
@@ -123,7 +124,6 @@ gridButton.addEventListener('click', () => {
         gridValue = true;
         for(let i=0; i< squares.length; i++){
             squares[i].style.border = '1px solid black';
-            container.style.border = '1px solid black';
         }
     };
 
@@ -131,7 +131,6 @@ gridButton.addEventListener('click', () => {
         gridValue = false;
         for(let i=0; i< squares.length; i++){
             squares[i].style.border = 'none';
-            container.style.border = 'none';
         }
     };
 });
